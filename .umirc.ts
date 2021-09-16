@@ -2,9 +2,13 @@ import { defineConfig } from 'umi';
 
 export default defineConfig({
   layout: {},
+  theme: {
+    '@primary-color': '#17C3D2',
+  },
   nodeModulesTransform: {
     type: 'none',
   },
+  favicon: '/assets/favicon.ico',
   extraBabelPresets: [
     [
       '@babel/preset-typescript',
@@ -46,14 +50,16 @@ export default defineConfig({
       redirect: '/label_task_manage',
     },
     {
-      name: '标注任务管理',
-      path: '/label_task_manage',
-      component: './LabelImage/LabelTaskManage',
+      name: '图片标注平台',
+      icon: 'TagsOutlined',
+      path: '/do_label_image',
+      component: './DoLabelImage',
     },
     {
-      name: '标注平台',
-      path: '/do_label',
-      component: './LabelImage/DoLabel',
+      name: '标注任务管理',
+      icon: 'BarsOutlined',
+      path: '/label_task_manage',
+      component: './LabelTaskManage',
     },
   ],
   fastRefresh: {},
