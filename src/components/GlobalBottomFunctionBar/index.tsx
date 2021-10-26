@@ -80,15 +80,17 @@ class GlobalBottomFunctionBar extends Component<
           {/*  </Row>*/}
           {/*</Col>*/}
           <Col span={18}>
-            <Row justify="center">
-              <Pagination
-                style={{ color: 'red' }}
-                simple
-                defaultPageSize={1}
-                defaultCurrent={2}
-                total={50}
-              />
-            </Row>
+            <Tooltip title="图片名称">
+              <Row justify="center">
+                <Pagination
+                  style={{ color: 'red' }}
+                  simple
+                  defaultPageSize={1}
+                  defaultCurrent={2}
+                  total={50}
+                />
+              </Row>
+            </Tooltip>
           </Col>
           <Col span={1}>
             <div
